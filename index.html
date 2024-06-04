@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pong</title>
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div class="game-scene" id="titleScreen">
+        <div class="main">
+            <h1>Pong</h1>
+            <div class="btn-box">
+                <button onclick="Menu.startGame();">Play</button>
+                <button onclick="Menu.goSettings();">Settings</button>
+                <button onclick="Menu.quitGame();">Quit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-scene" id="gameScreen">
+        <canvas width="720" height="480" id="canvas"></canvas>
+    </div>
+
+    <div class="game-scene" id="winScreen">
+        <div class="main">
+            <h1 id="winnerHeading"></h1>
+            <div class="btn-box">
+                <p id="winPoints"></p>
+                <button onclick="window.location.href = '';">New Game</button>
+                <button onclick="window.location.href = '';">Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-scene" id="settingsScreen">
+        <div class="main">
+            <h1>Settings</h1>
+            <div class="btn-box">
+                <p>
+                    <label for="maxPoints">Max Points</label>
+                    <input type="number" name="setting" id="maxPoints" min="1" max="9">
+                </p>
+                <p>
+                    <label for="bot">Bot(Player 2)</label>
+                    <input type="checkbox" name="setting" id="bot">
+                </p>
+                <p>
+                    <label for="botMode">Mode</label>
+                    <select name="setting" id="botMode">
+                        <option value="easy">Easy</option>
+                        <option value="normal">Normal</option>
+                        <option value="hard">Hard</option>
+                        <option value="impossible">Impossible</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="uiScale">Scale of UI</label>
+                    <input type="range" name="setting" id="uiScale" min="5" max="15" onclick="Menu.saveSettings();">
+                </p>
+                <button onclick="Menu.saveSettings(); Menu.goMainMenu();">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="credits">&copy;Felix Wrba</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

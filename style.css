@@ -1,0 +1,103 @@
+:root {
+    --scene-bg-color: #000000;
+    --scene-font-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100dvh;
+    scale: 1;
+    overflow: hidden;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-scene {
+    background-color: var(--scene-bg-color);
+    color: var(--scene-font-color);
+    width: 720px;
+    height: 480px;
+    display: none;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.credits {
+    height: fit-content;
+    width: 720px;
+    color: var(--scene-bg-color);
+}
+
+.btn-box {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+h1 {
+    font-size: 4em;
+    letter-spacing: -2px;
+    margin-top: 0;
+}
+
+.btn-box button {
+    border: none;
+    padding: 4px;
+    font-size: 1.5em;
+    margin: 6px;
+    cursor: pointer;
+    outline: 1px solid transparent;
+    background-color: var(--scene-font-color);
+    outline-offset: 0px;
+    transition: all 0.1s;
+}
+
+.btn-box button:hover {
+    outline: 1px solid var(--scene-font-color);
+    outline-offset: 4px;
+    scale: 1.1;
+}
+
+.btn-box button:active {
+    scale: 1;
+}
+
+input,
+option,
+select {
+    border: none;
+    outline: 1px solid var(--scene-font-color);
+    outline-offset: 0px;
+    background-color: var(--scene-font-color);
+    font-size: 1em;
+    transition: all 0.1s;
+}
+
+input[type=range],
+input[type=checkbox] {
+    outline: none;
+    accent-color: var(--scene-font-color);
+}
+
+input:hover,
+input:focus {
+    outline-offset: 2px;
+    scale: 1.1;
+}
+
+canvas {
+    background-color: var(--scene-bg-color);
+}

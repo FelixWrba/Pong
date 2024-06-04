@@ -1,0 +1,16 @@
+{
+    "theme_color": "#ffffff",
+    "background_color": "#000000",
+    "display": "fullscreen",
+    "start_url": "/index.html",
+    "name": "Pong",
+    "short_name": "Pong",
+    "description": "Clone of the first computer game.",
+    "icons": [
+        {
+            "src": "icons/icon512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
