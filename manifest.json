@@ -6,6 +6,7 @@
     "name": "Pong",
     "short_name": "Pong",
     "description": "Clone of the first computer game.",
+    "orientation": "landscape",
     "icons": [
         {
             "src": "icons/icon512.png",
